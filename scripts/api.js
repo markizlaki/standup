@@ -1,6 +1,7 @@
 import { Notification } from "./Notification";
 
-const API_URL = "https://ethereal-acute-beanie.glitch.me/";
+// const API_URL = "https://ethereal-acute-beanie.glitch.me/";
+const API_URL = "http://localhost:8080/";
 
 export const getComedians = async () => {
     try {

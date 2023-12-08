@@ -78,15 +78,13 @@ export const initForm = (
 
         const data = { booking: [] };
         const times = new Set();
+        console.log(data);
 
         new FormData(bookingForm).forEach((value, field) => {
-            console.log(value, field);
             if (field === "booking") {
-                const [comedian, time] = value.split(",");
+                const [comedian, time] = value.split(", ");
 
                 if (comedian && time) {
-                    console.log(comedian);
-                    console.log(time);
                     data.booking.push({ comedian, time });
                     times.add(time);
                 }

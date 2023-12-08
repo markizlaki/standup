@@ -62,6 +62,8 @@ export const createComedianBlock = (comedians, bookingComediansList) => {
         bookingHall.remove();
     });
 
+    
+
     bookingTomSelectTime.on("change", (time) => {
         if (!time) {
             return;

@@ -4,16 +4,16 @@ import { Notification } from "./Notification";
 const displayQrCode = (data) => {
     let error = false;
     const modal = document.querySelector(".modal");
-    const canvas = document.getElementById(".qrCanvas");
+    const canvas = document.querySelector("#qrCanvas");
     const closeButton = document.querySelector(".modal__close");
 
-    QRCode.toCanvas(canvas, data, () => {
+    QRCode.toCanvas(canvas, data, (err) => {
         if (err) {
             error = true;
-            console.err(err);
+            console.error(err);
             return;
         }
-        console.err("QRcode создан");
+        console.log("QRcode создан");
     });
 
     if (error) {
